@@ -19,5 +19,16 @@ $(function(){
         }
     }
   });
+
+  // Backborn.Collectionを継承したAddressCollectionクラスを定義
+  var AddressCollection = Backbone.Collection.extends({
+    // このコレクションを扱うモデル
+    model: Address;
+    // addressbook-sampleというキーでlocalStorageを扱う
+    localStorage: new Store('addressbook-sample')
+  });
+
+  // インスタンスの生成
+  var Addresses = new AddressCollection;
 })
 
