@@ -1,7 +1,12 @@
 @(message: String)
 
 @main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message)
-    
+<div id="app">
+<h1>Address Book</h1>
+  <input id="new-address" type="text" size="30" placeholder="Input name and press enter.">
+  <div id="addressbook">
+    <ul id="list"></ul>
+  </div>
+  <button id="delete-all">Delete all</button>
+</div>
 }
